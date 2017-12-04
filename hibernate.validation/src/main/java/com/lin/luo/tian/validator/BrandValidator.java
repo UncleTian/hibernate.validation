@@ -32,8 +32,7 @@ public class BrandValidator implements ConstraintValidator<AuthorizedBrand, Stri
 		}
 
 		context.disableDefaultConstraintViolation();
-		ConstraintViolationBuilder builder = context.buildConstraintViolationWithTemplate(message);
-		builder.addConstraintViolation();
+		context.buildConstraintViolationWithTemplate(message).addConstraintViolation();
 
 		return flag;
 	}
